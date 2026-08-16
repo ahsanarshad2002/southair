@@ -1,0 +1,184 @@
+"use client";
+
+const network = [
+    {
+        id: "01",
+        city: "Islamabad",
+        code: "ISB",
+        connections: 4,
+        tags: ["MBI", "SKZ", "BHV", "RYK"],
+    },
+    {
+        id: "02",
+        city: "Karachi",
+        code: "KHI",
+        connections: 6,
+        tags: ["BHV", "PJG", "SKZ", "TUK", "RYK", "GWD"],
+    },
+    {
+        id: "03",
+        city: "Sukkur",
+        code: "SKZ",
+        connections: 3,
+        tags: ["UET", "KHI", "ISB"],
+    },
+    {
+        id: "04",
+        city: "Quetta",
+        code: "UET",
+        connections: 2,
+        tags: ["SKZ", "GWD"],
+    },
+    {
+        id: "05",
+        city: "Bahawalpur",
+        code: "BHV",
+        connections: 3,
+        tags: ["ISB", "LHE", "KHI"],
+    },
+    {
+        id: "06",
+        city: "Lahore",
+        code: "LHE",
+        connections: 2,
+        tags: ["BHV", "RYK"],
+    },
+    {
+        id: "07",
+        city: "Peshawar",
+        code: "PEW",
+        connections: 2,
+        tags: ["PJG", "TUK"],
+    },
+    {
+        id: "08",
+        city: "Turbat",
+        code: "TUK",
+        connections: 3,
+        tags: ["MUX", "KHI", "PEW"],
+    },
+    {
+        id: "09",
+        city: "Multan",
+        code: "MUX",
+        connections: 2,
+        tags: ["TUK", "PJG"],
+    },
+    {
+        id: "10",
+        city: "Rahim Yar Khan",
+        code: "RYK",
+        connections: 3,
+        tags: ["ISB", "LHE", "KHI"],
+    },
+    {
+        id: "11",
+        city: "Gwadar",
+        code: "GWD",
+        connections: 2,
+        tags: ["KHI", "UET"],
+    },
+];
+
+const NetworkSection = () => {
+    return (
+        <section className="w-full bg-[#F8F8F8]">
+            <div className="container-global py-14 lg:py-20">
+
+                {/* Heading */}
+                <div className="mb-12">
+                    <p className="uppercase tracking-[3px] text-[11px] font-semibold text-[#D79C18]">
+                        Our Network
+                    </p>
+                    <h2
+                        className="mt-3 font-bold text-[#132B74]
+            text-[28px]
+            md:text-[36px]
+            lg:text-[44px]
+            xl:text-[52px]
+            leading-[1.1]"
+                    >
+                        Explore Our Connections
+                    </h2>
+                </div>
+
+                {/* Single Array — Default Compact Row, Hover = Full Hub Card */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {network.map((item) => (
+                        <div
+                            key={item.code}
+                            className="group relative overflow-hidden rounded-xl bg-white border border-[#ECECEC] shadow-[0_8px_25px_rgba(0,0,0,.04)] transition-all duration-500 ease-out hover:-translate-y-1 hover:bg-[#c62128] hover:border-[#10267A] hover:shadow-[0_25px_50px_rgba(0,0,0,.12)]"
+                        >
+                            {/* Gold Left Border — sirf hover pe */}
+                            <div className="absolute left-0 top-0 h-full w-[3px] bg-[#0057A6] scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500 ease-out" />
+
+                            <div className="relative">
+
+                                {/* Default (Compact Row) State — height set by THIS layer */}
+                                <div className="px-5 py-5 flex items-center opacity-100 group-hover:opacity-0 group-hover:h-0 group-hover:py-0 group-hover:overflow-hidden transition-all duration-300 ease-out">
+                                    <h4 className="min-w-fit text-[18px] font-bold text-[#132B74]">
+                                        {item.code}
+                                    </h4>
+                                    <span className="mx-4 h-px w-8 bg-[#0057A6]" />
+                                    <p className="text-[11px] uppercase tracking-[1.5px] font-medium text-[#5F6775]">
+                                        {item.tags.join(" ")}
+                                    </p>
+                                </div>
+
+                                {/* Hover (Full Hub Card) State — collapsed to 0 height by default */}
+                                <div className="max-h-0 opacity-0 group-hover:max-h-[300px] group-hover:opacity-100 overflow-hidden transition-all duration-500 ease-out">
+                                    <div className="p-7">
+
+                                        <div className="flex items-start justify-between">
+                                            <div>
+                                                <p className="uppercase tracking-[2px] text-[10px] font-semibold text-white/80">
+                                                    MASTER HUB {item.id}
+                                                </p>
+
+                                                <div className="mt-2 flex items-end gap-2">
+                                                    <h3 className="font-bold text-white text-[26px] md:text-[30px] leading-none">
+                                                        {item.city}
+                                                    </h3>
+                                                    <span className="pb-0.5 text-[16px] font-semibold text-white/80">
+                                                        {item.code}
+                                                    </span>
+                                                </div>
+
+                                                <p className="mt-3 text-[11px] uppercase tracking-[1.5px] text-white/70">
+                                                    {item.connections} Direct Connections
+                                                </p>
+                                            </div>
+
+                                            <div className="flex items-center gap-2 pt-1">
+                                                <span className="h-2 w-2 rounded-full bg-white/80" />
+                                                <span className="text-[9px] uppercase tracking-[2px] text-white/80">
+                                                    Hub Active
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div className="mt-6 flex flex-wrap gap-2">
+                                            {item.tags.map((tag) => (
+                                                <span
+                                                    key={tag}
+                                                    className="rounded-lg bg-white/10 px-3 py-1.5 text-[11px] font-semibold text-white backdrop-blur-sm"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+        </section>
+    );
+};
+
+export default NetworkSection;

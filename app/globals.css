@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
+} */
+
+@theme {
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1400px;
+  --breakpoint-3xl: 1600px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer components {
+  .container-global {
+    @apply w-full mx-auto px-4;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Mobile: 320px - 420px */
+  @media (min-width: 320px) {
+    .container-global {
+      max-width: 100%;
+      @apply px-4;
+    }
+  }
+
+  /* Tablet Portrait: 768px - 950px */
+  @media (min-width: 768px) {
+    .container-global {
+      max-width: 920px;
+      @apply px-6;
+    }
+  }
+
+  /* Small Laptop / Tablet Landscape: 990px - 1100px */
+  @media (min-width: 990px) {
+    .container-global {
+      max-width: 1060px;
+      @apply px-8;
+    }
+  }
+
+  /* Laptop: 1260px - 1400px */
+  @media (min-width: 1260px) {
+    .container-global {
+      max-width: 1320px;
+      @apply px-10;
+    }
+  }
+
+  /* Large Laptop: 1410px - 1560px */
+  @media (min-width: 1410px) {
+    .container-global {
+      max-width: 1480px;
+      @apply px-12;
+    }
+  }
+
+  /* Desktop: 1600px - 2K */
+  @media (min-width: 1600px) {
+    .container-global {
+      max-width: 1720px;
+      @apply px-16;
+    }
+  }
+
+  /* 2K+ Displays */
+  @media (min-width: 2048px) {
+    .container-global {
+      max-width: 1840px;
+      @apply px-20;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+.booking-card {
+  background: rgba(255, 255, 255, 0.50);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(9.1px);
+  -webkit-backdrop-filter: blur(9.1px);
 }
