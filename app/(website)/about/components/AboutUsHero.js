@@ -9,7 +9,7 @@ const AboutUsHero = () => {
                 <div className="container-global relative" >
                     {/* content */}
                     <div className="flex-1 flex flex-col items-start pt-10 xl:pt-0" >
-                        <h1 className="text-[28px] md:text-[34px] lg:text-[40px] xl:text-[50px] 2xl:text-[60px] 3xl:text-[72px] font-bold w-full max-w-[50%] lg:max-w-[30%] border-l-6 pl-4 border-[#0057A6] md:leading-15 text-white mt-3" >ABOUT SOUTH AIR</h1>
+                        <h1 className="text-[28px] md:text-[34px] lg:text-[40px] xl:text-[50px] 2xl:text-[60px] 3xl:text-[72px] font-bold w-full lg:max-w-[50%] lg:max-w-[30%] border-l-6 pl-4 border-[#0057A6] md:leading-15 text-white mt-3" >ABOUT SOUTH AIR</h1>
                     </div>
                 </div>
             </div>

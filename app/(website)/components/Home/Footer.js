@@ -46,7 +46,7 @@ const Footer = () => {
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="flex-1 md:w-72 bg-white/10 text-white placeholder:text-white/50 text-sm rounded-l-full px-5 py-3 outline-none border border-white/80 border-r-0"
+                            className="flex-1 w-full md:w-72 bg-white/10 text-white placeholder:text-white/50 text-sm rounded-l-full px-5 py-3 outline-none border border-white/80 border-r-0"
                         />
                         <button className="bg-[#ffffff] hover:bg-[#E02020]/90 transition-colors text-[#E02020] text-xs font-bold uppercase tracking-wide px-6 rounded-r-full whitespace-nowrap">
                             Subscribe
@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
 
             {/* Main footer content */}
-            <div className="w-full py-16">
+            <div className="w-full  mt-5 lg:mt-0 mb-5 lg:mb-0 lg:py-16">
                 <div className="container-global">
                     <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10">
                         {/* Brand */}
@@ -165,7 +165,7 @@ const Footer = () => {
                     </div>
 
                     {/* Bottom bar */}
-                    <div className="mt-14 pt-6 border-t border-white/10">
+                    <div className="mt-6 lg:mt-14 pt-6 border-t border-white/10">
                         <p className="text-white text-xs">
                             South Air (Pvt.) Limited | {new Date().getFullYear()} | All
                             Rights Reserved

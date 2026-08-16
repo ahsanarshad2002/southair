@@ -66,7 +66,7 @@ const Testimonials = () => {
                         <p className="text-[#0B1F4B] text-xs font-bold uppercase tracking-widest mb-3">
                             Testimonials
                         </p>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-[#E02020] leading-tight mb-8">
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-[#E02020] leading-tight mb-8">
                             What Our Passengers
                             <br />
                             Say

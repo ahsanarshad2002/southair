@@ -57,7 +57,7 @@ const AboutConnectingDreams = () => {
 
                                 <p className="text-[#5D6672] leading-8 text-[16px]">
                                     South Air is a next-generation domestic airline proudly
-                                    rooted in Pakistan with a bold vision — to make air travel
+                                    rooted in Pakistan with a bold vision to make air travel
                                     accessible, efficient, and affordable for underserved
                                     communities across the country. While major carriers focus
                                     on larger cities, South Air is built to bridge the gap,
@@ -69,14 +69,14 @@ const AboutConnectingDreams = () => {
                                     We believe that connectivity is not a privilege, but a
                                     right. With that in mind, South Air is designed to bring
                                     modern, reliable, and comfortable air services to the
-                                    people who need it most — students, families,
+                                    people who need it most students, families,
                                     entrepreneurs, and workers from remote and developing
                                     regions who often lack convenient travel options. Our
                                     journey is backed by a passionate team of aviation
                                     professionals, visionary leadership, and a commitment to
                                     innovation in every detail; from intuitive digital
                                     platforms to seamless passenger service. At South Air,
-                                    we're not just launching flights — we're launching
+                                    we're not just launching flights we're launching
                                     possibilities. Whether you're flying for education,
                                     family, business, or opportunity, we're here to take you
                                     further.

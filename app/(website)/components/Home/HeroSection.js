@@ -6,7 +6,7 @@ import BookingTabs from "./BookingTabs";
 const HeroSection = () => {
     return (
         <>
-            <div className="w-full py-14 xl:py-36 relative">
+            <div className="w-full pt-28 lg:pt-0 py-14 xl:py-36 relative">
                 {/* Background layer — image + gradient clipped here only */}
                 <div className="absolute inset-0 overflow-hidden">
                     <div className="absolute inset-0 bg-[url('/home/hero-home-background.webp')] bg-cover bg-center bg-no-repeat"></div>
@@ -24,7 +24,7 @@ const HeroSection = () => {
 
                         <p className="text-white text-[16px] md:text-[18px] xl:text-[20px] 2xl:text-[24px] font-normal w-full lg:max-w-[80%] mt-4">Fly with South Air to over 15 domestic destinations. Premium comfort, world-class service, and the heritage of hospitalit.</p>
 
-                        <div className="flex items-center gap-2 mt-6">
+                        <div className="flex flex-col    lg:items-center gap-2 mt-6">
                             <button className="flex items-center gap-2 bg-[#E02020] rounded-full px-10 py-5 text-white font-normal text-[12px] md:text-[16px]">
                                 Book Your Flight  <IoMdArrowForward className="text-white" />
                             </button>

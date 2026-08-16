@@ -262,7 +262,7 @@ function ScheduleTab() {
             {/* BUTTON */}
             <button
                 onClick={handleViewSchedule}
-                className=" px-8 rounded-2xl bg-[#E02020] hover:bg-[#c81717] text-white font-semibold flex items-center justify-center gap-3 transition-all duration-200"
+                className=" px-8 py-4 rounded-2xl bg-[#E02020] hover:bg-[#c81717] text-white font-semibold flex items-center justify-center gap-3 transition-all duration-200"
             >
                 <FaRegCalendarDays size={22} />
                 View Schedule

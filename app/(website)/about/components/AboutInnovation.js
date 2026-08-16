@@ -20,13 +20,13 @@ const AboutInnovation = () => {
                         </h2>
 
                         <p className="mt-10 max-w-3xl text-[#dcecff] leading-8 text-[16px]">
-                            South Air is proudly backed by SOS Group — a multifaceted
+                            South Air is proudly backed by SOS Group a multifaceted
                             conglomerate operating across sectors like Security, Energy,
                             Technology, Healthcare, Education, Shipping, Hospitality, and
                             Aviation. With a global vision and a legacy of excellence,
                             SOS Group brings strength, trust, and infrastructure to every
                             venture. From safeguarding nations to empowering sustainability
-                            and progress, our reach goes beyond borders — driving innovation
+                            and progress, our reach goes beyond borders driving innovation
                             and positive change wherever we go.
                         </p>
 
