@@ -8,12 +8,23 @@ import { FaCaretDown, FaCheck } from "react-icons/fa";
 import { LuArrowLeftRight } from "react-icons/lu";
 
 const cities = [
-    "Karachi (KHI)",
-    "Lahore (LHE)",
-    "Islamabad (ISB)",
-    "Skardu (KDU)",
-    "Dubai (DXB)",
-    "Jeddah (JED)",
+    "Karachi, PAK",
+    "MULTAN, PAK",
+    "SUKKUR, PAK",
+    "ISLAMABAD, PAK",
+    "GWADAR, PAK",
+    "QUETTA, PAK",
+    "TURBAT, PAK",
+    "LAHORE, PAK",
+    "FAISALBAD, PAK",
+    "RAHIM YAR KHAN, PAK",
+    "PESHAWAR, PAK",
+    "GILGIT, PAK",
+    "MAI BAKHTWAR (ISLAMKOT), PAK",
+    "BAHAWALPUR, PAK",
+    "PANJGUR, PAK",
+    "JUZZAK, PAK",
+
 ];
 
 const currencies = ["PKR", "USD", "AED", "GBP", "EUR"];
@@ -64,11 +75,10 @@ function DropdownField({ label, value, options, onChange, icon }) {
                                     onChange(option);
                                     setOpen(false);
                                 }}
-                                className={`w-full text-left px-5 py-3 text-sm hover:bg-[#F2F4FA] transition ${
-                                    option === value
-                                        ? "bg-[#EEF1FB] text-[#E02020] font-semibold"
-                                        : "text-[#1D1D1D]"
-                                }`}
+                                className={`w-full text-left px-5 py-3 text-sm hover:bg-[#F2F4FA] transition ${option === value
+                                    ? "bg-[#EEF1FB] text-[#E02020] font-semibold"
+                                    : "text-[#1D1D1D]"
+                                    }`}
                             >
                                 {option}
                             </button>
@@ -97,9 +107,8 @@ function TabPanel({ activeTab, children }) {
 
     return (
         <div
-            className={`transition-all duration-200 ease-out ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
-            }`}
+            className={`transition-all duration-200 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
+                }`}
         >
             {children(displayedTab)}
         </div>
@@ -119,28 +128,25 @@ function StepProgress({ step, labels, onJump }) {
                         <button
                             type="button"
                             onClick={() => onJump(idx)}
-                            className={`h-7 w-7 shrink-0 rounded-full text-xs font-bold flex items-center justify-center transition-colors duration-200 ${
-                                active
-                                    ? "bg-[#E02020] text-white"
-                                    : done
+                            className={`h-7 w-7 shrink-0 rounded-full text-xs font-bold flex items-center justify-center transition-colors duration-200 ${active
+                                ? "bg-[#E02020] text-white"
+                                : done
                                     ? "bg-[#0B1F78]/15 text-[#E02020]"
                                     : "bg-[#ECECEC] text-[#888]"
-                            }`}
+                                }`}
                         >
                             {done ? <FaCheck size={10} /> : idx}
                         </button>
                         <span
-                            className={`ml-2 hidden sm:block text-xs font-semibold whitespace-nowrap ${
-                                active ? "text-[#E02020]" : "text-[#888]"
-                            }`}
+                            className={`ml-2 hidden sm:block text-xs font-semibold whitespace-nowrap ${active ? "text-[#E02020]" : "text-[#888]"
+                                }`}
                         >
                             {label}
                         </span>
                         {idx < labels.length && (
                             <div
-                                className={`mx-3 h-[2px] flex-1 rounded-full transition-colors duration-200 ${
-                                    done ? "bg-[#E02020]" : "bg-[#ECECEC]"
-                                }`}
+                                className={`mx-3 h-[2px] flex-1 rounded-full transition-colors duration-200 ${done ? "bg-[#E02020]" : "bg-[#ECECEC]"
+                                    }`}
                             />
                         )}
                     </div>
@@ -185,33 +191,30 @@ export default function BookingTabs() {
                 <div className="flex flex-wrap items-center gap-3 p-7 pb-5">
                     <button
                         onClick={() => setActiveTab("schedule")}
-                        className={`px-8 h-12 rounded-full text-sm font-semibold transition-all duration-200 ${
-                            activeTab === "schedule"
-                                ? "bg-[#E02020] text-white"
-                                : "bg-[#ECECEC] text-[#555]"
-                        }`}
+                        className={`px-8 h-12 rounded-full text-sm font-semibold transition-all duration-200 ${activeTab === "schedule"
+                            ? "bg-[#E02020] text-white"
+                            : "bg-[#ECECEC] text-[#555]"
+                            }`}
                     >
                         Schedule
                     </button>
 
                     <button
                         onClick={() => setActiveTab("book")}
-                        className={`px-8 h-12 rounded-full text-sm font-semibold transition-all duration-200 ${
-                            activeTab === "book"
-                                ? "bg-[#E02020] text-white"
-                                : "bg-[#ECECEC] text-[#555]"
-                        }`}
+                        className={`px-8 h-12 rounded-full text-sm font-semibold transition-all duration-200 ${activeTab === "book"
+                            ? "bg-[#E02020] text-white"
+                            : "bg-[#ECECEC] text-[#555]"
+                            }`}
                     >
                         Book
                     </button>
 
                     <button
                         onClick={() => setActiveTab("modify")}
-                        className={`px-8 h-12 rounded-full text-sm font-semibold transition-all duration-200 ${
-                            activeTab === "modify"
-                                ? "bg-[#E02020] text-white"
-                                : "bg-[#ECECEC] text-[#555]"
-                        }`}
+                        className={`px-8 h-12 rounded-full text-sm font-semibold transition-all duration-200 ${activeTab === "modify"
+                            ? "bg-[#E02020] text-white"
+                            : "bg-[#ECECEC] text-[#555]"
+                            }`}
                     >
                         Modify
                     </button>
@@ -304,17 +307,15 @@ function BookTab() {
                         <div className="inline-flex rounded-full bg-[#ECECEC] p-1 w-full">
                             <button
                                 onClick={() => setTripType("return")}
-                                className={`flex-1 h-9 rounded-full text-sm font-semibold transition duration-200 ${
-                                    tripType === "return" ? "bg-[#E02020] text-white" : "text-[#555]"
-                                }`}
+                                className={`flex-1 h-9 rounded-full text-sm font-semibold transition duration-200 ${tripType === "return" ? "bg-[#E02020] text-white" : "text-[#555]"
+                                    }`}
                             >
                                 Return
                             </button>
                             <button
                                 onClick={() => setTripType("oneway")}
-                                className={`flex-1 h-9 rounded-full text-sm font-semibold transition duration-200 ${
-                                    tripType === "oneway" ? "bg-[#E02020] text-white" : "text-[#555]"
-                                }`}
+                                className={`flex-1 h-9 rounded-full text-sm font-semibold transition duration-200 ${tripType === "oneway" ? "bg-[#E02020] text-white" : "text-[#555]"
+                                    }`}
                             >
                                 One Way
                             </button>
@@ -372,9 +373,8 @@ function BookTab() {
             {/* STEP 3 — Dates */}
             {step === 3 && (
                 <div
-                    className={`grid gap-5 ${
-                        tripType === "return" ? "lg:grid-cols-[1fr_1fr_auto]" : "lg:grid-cols-[1fr_auto]"
-                    }`}
+                    className={`grid gap-5 ${tripType === "return" ? "lg:grid-cols-[1fr_1fr_auto]" : "lg:grid-cols-[1fr_auto]"
+                        }`}
                 >
                     <div className="bg-white border border-gray-300 rounded-2xl px-6 py-5">
                         <label className="block text-[11px] uppercase tracking-[2px] text-[#E02020] font-semibold mb-2">
