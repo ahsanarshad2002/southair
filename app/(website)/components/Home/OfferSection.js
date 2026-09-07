@@ -142,7 +142,7 @@ const BoardingPassSlider = () => {
                             aria-label="Previous"
                             onClick={goPrev}
                             disabled={atStart}
-                            className="w-11 h-11 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-600 hover:border-slate-300 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:text-slate-400 disabled:hover:border-slate-200"
+                            className="w-11 h-11 cursor-pointer rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-600 hover:border-slate-300 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:text-slate-400 disabled:hover:border-slate-200"
                         >
                             <TbSquareRoundedChevronLeft className="w-5 h-5" />
                         </button>
@@ -151,7 +151,7 @@ const BoardingPassSlider = () => {
                             aria-label="Next"
                             onClick={goNext}
                             disabled={atEnd}
-                            className="w-11 h-11 rounded-full bg-[#E02020] flex items-center justify-center text-white hover:bg-[#E02020]/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-[#E02020]"
+                            className="w-11 h-11 cursor-pointer rounded-full bg-[#E02020] flex items-center justify-center text-white hover:bg-[#E02020]/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-[#E02020]"
                         >
                             <TbSquareRoundedChevronRight className="w-5 h-5" />
                         </button>
@@ -202,7 +202,7 @@ const BoardingPassSlider = () => {
                                     <div className="w-[64%] flex flex-col">
                                         <div className="bg-[#111827] px-4 py-2">
                                             <p className="text-white text-[20px] 3xl:text-[40px] uppercase font-bold tracking-wide">
-                                                Spical Offer
+                                                Special Offer
                                             </p>
                                         </div>
 
